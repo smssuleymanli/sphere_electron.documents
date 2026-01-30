@@ -1,0 +1,14 @@
+name: My First CI
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run fake test
+        run: echo "CI works 🎉"
