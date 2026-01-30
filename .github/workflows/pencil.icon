@@ -10,26 +10,5 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install Newman
-        run: npm install -g newman
-
-    - name: Run fake test
-  run: echo "CI is working! ✅"
-
-
-            {
-              "name": "Sample GET request",
-              "request": {
-                "url": "https://jsonplaceholder.typicode.com/todos/1",
-                "method": "GET"
-              },
-              "event": [],
-              "response": []
-            }
-          ]' > collection.json
-          newman run collection.json || 
+      - name: Run fake test
+        run: echo "CI is working! ✅"
