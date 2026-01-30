@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run fake test
-        run: echo "CI works 🎉"
+        run: exit 1
